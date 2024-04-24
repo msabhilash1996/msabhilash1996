@@ -1,19 +1,24 @@
-name: Generate Datas
+name: Generate Data (singular or plural based on your data)
 on:
   schedule: # execute every 12 hours
     - cron: "* */12 * * *"
   workflow_dispatch:
+
 jobs:
   build:
-    name: Jobs to update datas
+    name: Jobs to update data
     runs-on: ubuntu-latest
     steps:
-      # Snake Animation
+      # Add steps to update your data here (e.g., fetch, transform, generate)
+      # ...
+
+      # Snake Animation (optional, comment out if not needed)
       - uses: Platane/snk@master
         id: snake-gif
-with:
+        with:
           github_user_name: msabhilash1996
           svg_out_path: dist/github-contribution-grid-snake.svg
+
       - uses: crazy-max/ghaction-github-pages@v2.1.3
         with:
           target_branch: output
